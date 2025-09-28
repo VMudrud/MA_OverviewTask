@@ -12,9 +12,9 @@ FROM eclipse-temurin:25-jre-alpine AS final
 WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["java","-jar","app.jar"]
 
 # Run service command
-# docker run --name resource-service --network microservicearchitectureoverviewtask_default -p 8081:8080 resource-service
+# docker run --name resource-service --network microservicearchitectureoverviewtask_default -p 8081:8081 resource-service

@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS song_resource (
+    id BIGSERIAL PRIMARY KEY,
+    data BYTEA
+);

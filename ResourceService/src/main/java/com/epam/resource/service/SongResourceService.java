@@ -50,6 +50,7 @@ public class SongResourceService {
             songServiceClient.uploadMetadata(metadata);
         } catch (Exception exception) {
             deleteCreatedResource(id);
+            log.error("Error while uploading metadata for resource ID: {}", id, exception);
             throw new FailedToUploadMetadataException("The request body is invalid MP3.");
         }
     }

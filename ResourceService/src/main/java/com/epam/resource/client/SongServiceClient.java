@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "song-service", url = "${song.service.url}")
+@FeignClient(name = "song-service", path = "/songs")
 public interface SongServiceClient {
 
     @PostMapping
